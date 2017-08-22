@@ -3,7 +3,7 @@
 ###
 
 # 2 argument
-step "ipnat :v_cmd v_opt" do |v_cmd, v_opt|
+step "ipnat :v_cmd :v_opt" do |v_cmd, v_opt|
   svspec = Serverspec::Type::Ipnat.new()
 
   case v_cmd 

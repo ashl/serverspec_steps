@@ -3,7 +3,7 @@
 ###
 
 # 2 argument
-step "mail_alias :v_arg :v_cmd v_opt" do |v_arg, v_cmd, v_opt|
+step "mail_alias :v_arg :v_cmd :v_opt" do |v_arg, v_cmd, v_opt|
   svspec = Serverspec::Type::Mail_alias.new(v_arg)
 
   case v_cmd 

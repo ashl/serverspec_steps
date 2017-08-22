@@ -15,7 +15,7 @@ step "process :v_arg :v_cmd" do |v_arg, v_cmd|
 end
 
 # 2 argument
-step "process :v_arg :v_cmd v_opt" do |v_arg, v_cmd, v_opt|
+step "process :v_arg :v_cmd :v_opt" do |v_arg, v_cmd, v_opt|
   svspec = Serverspec::Type::Process.new(v_arg)
 
   case v_cmd 

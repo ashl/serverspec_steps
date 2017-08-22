@@ -15,7 +15,7 @@ step "bond :v_arg :v_cmd" do |v_arg, v_cmd|
 end
 
 # 2 argument
-step "bond :v_arg :v_cmd v_opt" do |v_arg, v_cmd, v_opt|
+step "bond :v_arg :v_cmd :v_opt" do |v_arg, v_cmd, v_opt|
   svspec = Serverspec::Type::Bond.new(v_arg)
 
   case v_cmd 

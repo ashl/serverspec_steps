@@ -17,7 +17,7 @@ step "linux_audit_system :v_arg :v_cmd" do |v_arg, v_cmd|
 end
 
 # 2 argument
-step "linux_audit_system :v_arg :v_cmd v_opt" do |v_arg, v_cmd, v_opt|
+step "linux_audit_system :v_arg :v_cmd :v_opt" do |v_arg, v_cmd, v_opt|
   svspec = Serverspec::Type::Linux_audit_system.new(v_arg)
 
   case v_cmd 

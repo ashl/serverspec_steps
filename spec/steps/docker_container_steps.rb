@@ -17,7 +17,7 @@ step "docker_container :v_arg :v_cmd" do |v_arg, v_cmd|
 end
 
 # 2 argument
-step "docker_container :v_arg :v_cmd v_opt" do |v_arg, v_cmd, v_opt|
+step "docker_container :v_arg :v_cmd :v_opt" do |v_arg, v_cmd, v_opt|
   svspec = Serverspec::Type::Docker_container.new(v_arg)
 
   case v_cmd 

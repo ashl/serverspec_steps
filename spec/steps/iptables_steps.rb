@@ -3,7 +3,7 @@
 ###
 
 # 2 argument
-step "iptables :v_cmd v_opt" do |v_cmd, v_opt|
+step "iptables :v_cmd :v_opt" do |v_cmd, v_opt|
   svspec = Serverspec::Type::Iptables.new()
 
   case v_cmd 

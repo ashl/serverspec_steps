@@ -3,8 +3,8 @@
 ###
 
 # 1 argument
-step "selinux :v_arg :v_cmd" do |v_arg, v_cmd|
-  svspec = Serverspec::Type::Selinux.new(v_arg)
+step "selinux :v_cmd" do |v_cmd|
+  svspec = Serverspec::Type::Selinux.new()
 
   case v_cmd
   when "be_disabled", "disabled"

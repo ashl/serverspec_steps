@@ -3,7 +3,7 @@
 ###
 
 # 2 argument
-step "ipfilter :v_cmd v_opt" do |v_cmd, v_opt|
+step "ipfilter :v_cmd :v_opt" do |v_cmd, v_opt|
   svspec = Serverspec::Type::Ipfilter.new()
 
   case v_cmd 

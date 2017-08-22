@@ -3,7 +3,7 @@
 ###
 
 # 2 argument
-step "cron :v_arg :v_cmd v_opt" do |v_arg, v_cmd, v_opt|
+step "cron :v_arg :v_cmd :v_opt" do |v_arg, v_cmd, v_opt|
   svspec = Serverspec::Type::Cron.new()
 
   case v_cmd 

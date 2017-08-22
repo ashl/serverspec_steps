@@ -3,7 +3,7 @@
 ###
 
 # 2 argument
-step "linux_kernel_parameter :v_arg :v_cmd v_opt" do |v_arg, v_cmd, v_opt|
+step "linux_kernel_parameter :v_arg :v_cmd :v_opt" do |v_arg, v_cmd, v_opt|
   svspec = Serverspec::Type::Linux_kernel_parameter.new(v_arg)
 
   case v_cmd 

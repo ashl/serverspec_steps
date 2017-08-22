@@ -7,5 +7,6 @@ local-mode-cache
 
 # RVM and RBENV ruby version files
 .rbenv-version
+.ruby-version
 .rvmrc
 .ruby-gemset

@@ -1,0 +1,11 @@
+.DS_Store
+.bundle
+nodes
+Gemfile.lock
+vendor
+local-mode-cache
+
+# RVM and RBENV ruby version files
+.rbenv-version
+.rvmrc
+.ruby-gemset

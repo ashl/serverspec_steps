@@ -45,6 +45,8 @@ step "file :v_arg :v_cmd :v_opt" do |v_arg, v_cmd, v_opt|
   case v_cmd 
   when "match", "contain"
     expect(svspec.content).to match /#{v_opt}/
+  when "not_match", "not_contain"
+    expect(svspec.content).not_to match /#{v_opt}/
   when "be_mode", "mode"
     expect(svspec).to be_mode v_opt
   when "be_owned_by", "owned"

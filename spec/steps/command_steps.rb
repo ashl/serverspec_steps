@@ -23,8 +23,12 @@ step "command :v_arg :v_cmd :v_opt" do |v_arg, v_cmd, v_opt|
   case v_cmd
   when "out","stdout","match"
     expect(svspec.stdout).to match /#{v_opt}/
+  when "not_match"
+    expect(svspec.stdout).not_to match /#{v_opt}/
   when "err","stderr"
     expect(svspec.stderr).to match /#{v_opt}/
+  when "not_match_err"
+    expect(svspec.stderr).not_to match /#{v_opt}/
   when "status","exit_status","return"
     expect(svspec.exit_status).to eq v_opt.to_i
   else

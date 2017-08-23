@@ -9,10 +9,14 @@ step "service :v_arg :v_cmd" do |v_arg, v_cmd|
   case v_cmd
   when "enabled", "be_enabled"
     expect(svspec).to be_enabled
+  when "disabled", "be_disabled"
+    expect(svspec).not_to be_enabled
   when "installed", "be_installed"
     expect(svspec).to be_installed
   when "running", "be_running"
     expect(svspec).to be_running
+  when "stopping", "be_stopping", "not_running"
+    expect(svspec).not_to be_running
   else
     raise "unknown option : #{v_cmd}"
   end

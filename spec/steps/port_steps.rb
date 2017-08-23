@@ -9,6 +9,8 @@ step "port :v_arg :v_cmd" do |v_arg, v_cmd|
   case v_cmd
   when "listen", "listening", "be_listening"
     expect(svspec).to be_listening
+  when "not_listen", "not_listening", "not_be_listening"
+    expect(svspec).not_to be_listening
   else
     raise "unknown option : #{v_cmd}"
   end
